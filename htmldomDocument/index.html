@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Click Example</title>
+    </head>
+    <body>
+        
+        <h1> Click the Button and Change The Paragraph</h1>
+        <button id="myButton">Click Me</button>
+        <p id="myParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        
+
+        <script>
+            // Function to handle button click event
+            function handleClick() {
+                const paragraph = document.getElementById('myParagraph');
+                paragraph.textContent = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, corrupti dolor molestias accusamus sunt exercitationem iure, sit nisi voluptatem consectetur facilis itaque. Corporis fugiat quaerat necessitatibus inventore, quibusdam eos consectetur!';
+            }
+
+            // Attach event listener to the button
+            const button = document.getElementById('myButton');
+            button.addEventListener('click', handleClick);
+        </script>
+    </body>
+</html>

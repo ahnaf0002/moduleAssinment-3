@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Math Object</title>
+    </head>
+    <body>
+
+
+        <script>
+
+            // a. Write a JavaScript function that takes an array of numbers as input and returns the square root of the sum of squares of all the numbers. Use the Math object to perform the necessary calculations.
+
+            function calculateSquareRootOfSumOfSquares(numbers) {
+                const sumOfSquares = numbers.reduce((total, num) => total + Math.pow(num, 2), 0);
+                const squareRoot = Math.sqrt(sumOfSquares);
+
+                return squareRoot;
+            }
+
+
+            // b. Implement the function to display the square root of the sum of squares for an array of numbers.
+            
+            function displaySquareRootOfSumOfSquares(numbers) {
+                const result = calculateSquareRootOfSumOfSquares(numbers);
+                console.log("The square root of the sum of squares is: " + result);
+            }
+
+            const numbers = [3, 4, 5];
+            displaySquareRootOfSumOfSquares(numbers);
+
+        </script>
+    </body>
+</html>

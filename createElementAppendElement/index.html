@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Element & Append Element</title>
+    </head>
+    <body>
+        <h1>Create Element & Append Element Task Solution</h1>
+        <ul id="myList"></ul>
+
+        <script>
+            function createListItems() {
+                const ul = document.getElementById('myList');
+
+                for (let i = 1; i <= 5; i++) {
+                    const li = document.createElement('li');
+                    li.textContent = i;
+                    ul.appendChild(li);
+                }
+            }
+
+            // Call the function to create the list items
+            createListItems();
+        </script>
+    </body>
+</html>

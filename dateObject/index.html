@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+
+        <script>
+
+            // a. Create a function that takes a date in the format "YYYY-MM-DD" as a parameter and returns the day of the week for that date. The function should use the Date object.
+
+            function getDayOfWeek(dateString) {
+                const date = new Date(dateString);
+                const daysOfWeek = [
+                    'Sunday',
+                    'Monday',
+                    'Tuesday',
+                    'Wednesday',
+                    'Thursday',
+                    'Friday',
+                    'Saturday'
+                ];
+                const dayOfWeek = daysOfWeek[date.getDay()];
+
+                return dayOfWeek;
+            }
+            const date = '2023-06-20';
+            const dayOfWeek = getDayOfWeek(date);
+            console.log(dayOfWeek);
+            
+
+
+            // b. Implement the function to display the day of the week for the current date.
+
+            function displayCurrentDayOfWeek() {
+                const daysOfWeek = [
+                    'Sunday',
+                    'Monday',
+                    'Tuesday',
+                    'Wednesday',
+                    'Thursday',
+                    'Friday',
+                    'Saturday'
+                ];
+                const currentDate = new Date();
+                const dayOfWeek = daysOfWeek[currentDate.getDay()];
+
+                console.log("Today is " + dayOfWeek);
+            }
+
+            displayCurrentDayOfWeek();
+
+        </script>
+    </body>
+</html>

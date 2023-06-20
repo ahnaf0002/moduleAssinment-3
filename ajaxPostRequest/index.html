@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Axios POST Request</title>
+    </head>
+    <body>
+        <h1>API URL NOT WORKING ON MY SIDE. WHATEVER I WROTE THE CODE FOR IT.</h1>
+
+
+        <script src="js/axios.min.js"></script>
+        
+        <script>
+            
+            async function postData() {
+              try {
+                const response = await axios.post('https://api.example.com/submit', {
+                  name: 'John Doe',
+                  email: 'johndoe@example.com'
+                });
+        
+                console.log(response.data);
+              } catch (error) {
+                console.error(error);
+              }
+            }
+        
+            // Call the function to send the POST request
+            postData();
+          </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Axios GET Request</title>
+</head>
+<body>
+  <h1>API URL NOT WORKING ON MY SIDE. WHATEVER I WROTE THE CODE FOR IT.</h1>
+
+
+  <script src="js/axios.min.js"></script>
+  <script>
+    function getData() {
+      axios.get('https://api.example.com/data')
+        .then(response => {
+          // Process the received data
+          console.log(response.data);
+        })
+        .catch(error => {
+          // Handle any errors
+          console.error(error);
+        });
+    }
+
+    // Call the function to send the GET request
+    getData();
+  </script>
+</body>
+</html>

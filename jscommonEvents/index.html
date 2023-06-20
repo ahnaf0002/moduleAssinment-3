@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Webpage</title>
+        <style>
+            img {
+                width: 300px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Interactive Webpage</h1>
+        <img id="image" src="image/01.jpg" alt="Original Image">
+
+        <script>
+            // Function to display alert with click coordinates
+            function displayClickCoordinates(event) {
+                const x = event.clientX;
+                const y = event.clientY;
+                alert(`Clicked at coordinates (x, y): (${x}, ${y})`);
+            }
+
+            // Function to display alert with key code
+            function displayKeyCode(event) {
+                const keyCode = event.keyCode;
+                alert(`Key code pressed: ${keyCode}`);
+            }
+
+            // Function to change image source on mouseover
+            function changeImageSource() {
+                const image = document.getElementById('image');
+                image.src = 'image/02.jpg';
+            }
+
+            // Event listeners
+            document.addEventListener('click', displayClickCoordinates);
+            document.addEventListener('keydown', displayKeyCode);
+            document.getElementById('image').addEventListener('mouseover', changeImageSource);
+        </script>
+    </body>
+</html>
